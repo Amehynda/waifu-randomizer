@@ -1,0 +1,36 @@
+{
+	"personalityTypes": [{
+			"personality": "Serious"
+		},
+		{
+			"personality": "Tsundere"
+		},
+		{
+			"personality": "Chipper"
+		},
+		{
+			"personality": "Grumpy"
+		},
+		{
+			"personality": "Optimist"
+		},
+		{
+			"personality": "Pessimist"
+		},
+		{
+			"personality": "Motherly"
+		},
+		{
+			"personality": "Naughty"
+		},
+		{
+			"personality": "Playful"
+		},
+		{
+			"personality": "Quiet"
+		},
+		{
+			"personality": "Humble"
+		}
+	]
+}

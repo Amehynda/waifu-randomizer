@@ -1,0 +1,213 @@
+{
+	"hairStyle": [{
+			"type": "Pageboy"
+		},
+		{
+			"type": "Short bob"
+		},
+		{
+			"type": "Frizzy"
+		},
+		{
+			"type": "Wavy"
+		},
+		{
+			"type": "Long, braided"
+		},
+		{
+			"type": "Waist-length"
+		},
+		{
+			"type": "Ponytail"
+		},
+		{
+			"type": "Sidetail"
+		},
+		{
+			"type": "Twintails"
+		}
+	],
+		"jpHairStyles": [
+			{
+				"type": "Long, braided"
+			},
+			{
+				"type": "Waist-length"
+			},
+			{
+				"type": "Ponytail"
+			},
+			{
+				"type": "Sidetail"
+			},
+			{
+				"type": "Twintails"
+			},
+			{
+				"type": "Short bob"
+			}
+	],
+		"hairColor": [
+		{
+			"type": "Blonde"
+		},
+		{
+			"type": "Brown"
+		},
+		{
+			"type": "Red"
+		},
+		{
+			"type": "Strawberry Blonde"
+		},
+		{
+			"type": "Black"
+		}
+	],
+		"jpHairColor": [
+		{	
+			"type": "Black"
+		},
+		{
+			"type": "Dark Brown"
+		}
+	],
+		"animeHairColor": [
+		{
+			"type": "Pink"
+		},
+		{
+			"type": "Blue"
+		},
+		{
+			"type": "Green"
+		},
+		{
+			"type": "Purple"
+		},
+		{
+			"type": "Silver"
+		},
+		{
+			"type": "Blonde"
+		},
+		{
+			"type": "Brown"
+		},
+		{
+			"type": "Red"
+		},
+		{
+			"type": "Strawberry Blonde"
+		},
+		{
+			"type": "Black"
+		}
+	],
+		"eyeColor": [
+		{
+			"type": "Blue"
+		},
+		{
+			"type": "Green"
+		},
+		{
+			"type": "Brown"
+		},
+		{
+			"type": "Hazel"
+		}
+	],
+		"otherEyeColor": [
+		{
+			"type": "Silver"
+		},
+		{
+			"type": "Gold"
+		},
+		{
+			"type": "Red"
+		},
+		{
+			"type": "Purple"
+		},
+		{
+			"type": "Orange"
+		},
+		{
+			"type": "Blue"
+		},
+		{
+			"type": "Green"
+		},
+		{
+			"type": "Brown"
+		},
+		{
+			"type": "Hazel"
+		}
+	],
+		"skinTone": [
+		{
+			"type": "Pale"
+		},
+		{
+			"type": "Fair-skinned"
+		},
+		{
+			"type": "Tanned"
+		},
+		{
+			"type": "Dark-skinned"
+		}
+	],
+		"species": [
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Human"
+			},
+			{
+				"type": "Elf"
+			},
+			{
+				"type": "Half-Elf"
+			},
+			{
+				"type": "Cowgirl"
+			},
+			{
+				"type": "Sheepgirl"
+			},
+			{
+				"type": "Succubus"
+			}
+	],
+		"earthSpecies": [
+		{
+			"type" : "Human"
+		}
+	]
+}

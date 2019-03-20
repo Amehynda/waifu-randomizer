@@ -1,0 +1,92 @@
+{
+	"earthOccupation": [{
+			"occupation": "Assassin"
+		},
+		{
+			"occupation": "Baker"
+		},
+		{
+			"occupation": "Teacher"
+		},
+		{
+			"occupation": "Single Mother"
+		},
+		{
+			"occupation": "Librarian"
+		},
+		{
+			"occupation": "Spy"
+		},
+		{
+			"occupation": "Artist"
+		},
+		{
+			"occupation": "Accountant"
+		},
+		{
+			"occupation": "CEO"
+		},
+		{
+			"occupation": "Astronaut"
+		},
+		{
+			"occupation": "Therapist"
+		},
+		{
+			"occupation": "Office Worker"
+		},
+		{
+			"occupation": "Professional Gamer"
+		},
+		{
+			"occupation": "Web Designer"
+		},
+		{
+			"occupation": "Maid"
+		},
+		{
+			"occupation": "Hacker"
+		},
+		{
+			"occupation": "Roboticist"
+		}
+	],
+	"nsfwOccupation": [
+		{
+			"occupation": "Dominatrix"
+		},
+		{
+			"occupation": "Fetish Model"
+		},
+		{
+			"occupation": "Porn Star"
+		},
+		{
+			"occupation": "Naturalist"
+		},
+		{
+			"occupation": "Maid"
+		},
+		{
+			"occupation": "Hacker"
+		},
+		{
+			"occupation": "Roboticist"
+		},
+		{
+			"occupation": "Artist"
+		},
+		{
+			"occupation": "Accountant"
+		},
+		{
+			"occupation": "CEO"
+		},
+		{
+			"occupation": "Single Mother"
+		},
+		{
+			"occupation": "Teacher"
+		}
+	]
+}
