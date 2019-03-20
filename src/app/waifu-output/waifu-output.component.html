@@ -1,0 +1,29 @@
+<div class="component-container">
+  <div *ngIf="display" class="component-child result-container">
+      <div class="body">
+        <h2>{{ name }}</h2>
+        <p><b>Age:</b> {{ age }}</p>
+          <p><b>Birthday:</b> {{ birthday }}</p>
+          <p *ngIf="species != 'Human';"><b>Species: </b>{{ species }}</p>
+          <p><b>Height:</b> {{ height }} cm</p>
+          <p><b>Bust:</b> {{ bust }} cm</p>
+          <p><b>Weight:</b> {{ weight }} kg</p>
+          <p><b>Hair Color:</b> {{ hairColor }}</p>
+          <p><b>Hair Style:</b> {{ hairStyle }}</p>
+          <p><b>Eye Color:</b> {{ eyeColor }}</p>
+          <p><b>Skintone:</b> {{ skintone }}</p>
+        </div>
+        <div class="details">
+          <h3>Details:</h3>
+          <div *ngFor="let detail of details">
+            <p>{{ detail }}</p>
+          </div>
+        </div>
+  </div>
+  <div class="component-child" *ngIf="!display">
+    <p>There's nothing here! Make a new waifu by clicking on the button below.</p>
+  </div> 
+</div>
+<div class="button-container">
+    <button class="btn btn-primary" (click)="newWaifu();">New Waifu</button>
+</div>
