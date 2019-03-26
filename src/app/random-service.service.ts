@@ -176,10 +176,11 @@ export class RandomService {
       }
     }
     if (this.adultContentEnabled) {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 3;) {
         const entryToBeAdded = this.otherFeaturesJSON.adultFeatures[Math.floor(Math.random() * (this.otherFeaturesJSON.adultFeatures.length))].feature;
         const checkIfDupe = extraArray.includes(entryToBeAdded);
-        if (!checkIfDupe) {
+        const checkIfFutanari = extraArray.includes('futanari');
+        if (!checkIfDupe && !checkIfFutanari) {
           extraArray.push(entryToBeAdded);
           i++;
         }

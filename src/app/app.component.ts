@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Waifu Randomizer';
-  version = '0.0.1';
+  version = '0.0.2';
 }
