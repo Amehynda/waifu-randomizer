@@ -88,8 +88,8 @@ export class RandomService {
     const heightMin = 150;
     const heightMax = 180 + (this.realismType * 3);
 
-    const weightMin = 61;
-    const weightMax = 70 - (this.realismType * 2);
+    const weightMin = 50;
+    const weightMax = 75 - (this.realismType * 2);
 
 
     this.myWaifu.bust = Math.floor(Math.random() * (bustMax - bustMin + 1) + bustMin);
