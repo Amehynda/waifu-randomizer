@@ -1,6 +1,6 @@
 <div class="component-container">
-  <h2>Waifu Parameters</h2>
   <form (ngSubmit)="onSubmit()" id="waifuForm" #waifuForm="ngForm">
+    <h2>Waifu Parameters</h2>
     <div class="form-group component-child">
       <label for="name">Name Origin</label>
       <select placeholder="Choose..." class="form-control" id="name" #name="ngModel" name="name" [(ngModel)]="selectedNameRegion" required> 
@@ -14,8 +14,11 @@
       </select>
     </div>
     <div class="form-group component-child">
-      <input type="checkbox" name="adultcontent" id="adult" #adult=ngModel [(ngModel)]="this.adultEnabled">
-      <span>I am 18 or over and would like to view adult content.</span>
+      <div class="check-container">
+        <input type="checkbox" name="adultcontent" id="adult" #adult="ngModel" [(ngModel)]="this.adultEnabled">
+        <label for="adult"></label>
+        <span class="checkbox-text">Enable Adult Content (18+ Only!)</span>
+      </div>
     </div>
     <div class="component-child">
       <button type="submit" class="input-btn btn btn-success" [disabled]="!waifuForm.form.valid">Generate</button>

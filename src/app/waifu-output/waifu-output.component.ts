@@ -21,6 +21,7 @@ export class WaifuOutputComponent implements OnInit {
   bust = 80;
   weight = 65;
   details = [];
+  personality = null;
   hairColor = null;
   hairStyle = null;
   eyeColor = null;
@@ -32,6 +33,7 @@ export class WaifuOutputComponent implements OnInit {
     this.name = this.randomService.myWaifu.firstName + ' ' + this.randomService.myWaifu.lastName;
     this.age = this.randomService.myWaifu.age;
     this.occupation = this.randomService.myWaifu.occupation;
+    this.personality = this.randomService.myWaifu.personality;
     this.hairColor = this.randomService.myWaifu.haircolor;
     this.hairStyle = this.randomService.myWaifu.hairstyle;
     this.skintone = this.randomService.myWaifu.skintone;

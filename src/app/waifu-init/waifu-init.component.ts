@@ -29,7 +29,7 @@ export class WaifuInitComponent implements OnInit {
       id: 1
     },
     {
-      label: 'Some Fantasy Elements',
+      label: 'Semi-Realistic',
       id: 2
     },
     {

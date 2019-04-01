@@ -66,7 +66,9 @@ export class RandomService {
     this.makeBody();
     this.makeBirthday();
     this.makeJob();
+    this.makePersonality();
     this.makeFeatures();
+    this.sizeRandomizer();
     this.displayWaifu = true;
     this.router.navigateByUrl('result');
   }
@@ -144,6 +146,20 @@ export class RandomService {
     }
   }
 
+  // Generate a personality
+  makePersonality() {
+    this.myWaifu.personality = this.personalityJSON.personalityTypes[Math.floor(Math.random() * (this.personalityJSON.personalityTypes.length))].personality;
+  }
+
+  // If the waifu is a futanari, randomize how big they are
+  sizeRandomizer() {
+    if (this.myWaifu.extras.includes('Futanari')) {
+      const size = Math.floor(Math.random() * (35 - 10) + 10);
+      this.myWaifu.extras[this.myWaifu.extras.indexOf('Futanari')] += ' ' + '(' + size + ' cm' + ')';
+    }
+    return;
+  }
+
   // Appends a series of features to the myWaifu object
   makeFeatures() {
     const extraArray = [];
@@ -179,8 +195,7 @@ export class RandomService {
       for (let i = 0; i < 3;) {
         const entryToBeAdded = this.otherFeaturesJSON.adultFeatures[Math.floor(Math.random() * (this.otherFeaturesJSON.adultFeatures.length))].feature;
         const checkIfDupe = extraArray.includes(entryToBeAdded);
-        const checkIfFutanari = extraArray.includes('futanari');
-        if (!checkIfDupe && !checkIfFutanari) {
+        if (!checkIfDupe) {
           extraArray.push(entryToBeAdded);
           i++;
         }
