@@ -97,7 +97,7 @@ export class RandomService {
     this.myWaifu.bust = Math.floor(Math.random() * (bustMax - bustMin + 1) + bustMin);
     this.myWaifu.height = Math.floor(Math.random() * (heightMax - heightMin + 1) + heightMin);
     this.myWaifu.weight = Math.floor(Math.random() * (weightMax - weightMin + 1) + weightMin);
-    this.myWaifu.age = Math.floor(Math.random() * (32 - 20 + 1) + 20);
+    this.myWaifu.age = Math.floor(Math.random() * (34 - 20 + 1) + 20);
 
     this.myWaifu.skintone = this.featuresJSON.skinTone[Math.floor(Math.random() * (this.featuresJSON.skinTone.length))].type;
 
@@ -203,7 +203,12 @@ export class RandomService {
     }
     if (this.adultContentEnabled) {
       for (let i = 0; i < 3;) {
-        const entryToBeAdded = this.otherFeaturesJSON.adultFeatures[Math.floor(Math.random() * (this.otherFeaturesJSON.adultFeatures.length))].feature;
+        let entryToBeAdded = '';
+        if (this.realismType === 1) {
+          entryToBeAdded = this.otherFeaturesJSON.normalAdultFeatures[Math.floor(Math.random() * (this.otherFeaturesJSON.normalAdultFeatures.length))].feature;
+        } else {
+          entryToBeAdded = this.otherFeaturesJSON.adultFeatures[Math.floor(Math.random() * (this.otherFeaturesJSON.adultFeatures.length))].feature;
+        }
         const checkIfDupe = extraArray.includes(entryToBeAdded);
         if (!checkIfDupe) {
           extraArray.push(entryToBeAdded);
