@@ -68,7 +68,7 @@ export class RandomService {
     this.makeJob();
     this.makePersonality();
     this.makeFeatures();
-    this.sizeRandomizer();
+    this.sizeAdjuster();
     this.displayWaifu = true;
     this.router.navigateByUrl('result');
   }
@@ -91,7 +91,7 @@ export class RandomService {
     const heightMax = 180 + (this.realismType * 3);
 
     const weightMin = 63;
-    const weightMax = 75 - (this.realismType * 2);
+    const weightMax = 85;
 
 
     this.myWaifu.bust = Math.floor(Math.random() * (bustMax - bustMin + 1) + bustMin);
@@ -151,8 +151,18 @@ export class RandomService {
     this.myWaifu.personality = this.personalityJSON.personalityTypes[Math.floor(Math.random() * (this.personalityJSON.personalityTypes.length))].personality;
   }
 
+  // Add additional characteristic based on weight
+  // Adjust weight based on height/bust size
   // If the waifu is a futanari, randomize how big they are
-  sizeRandomizer() {
+  sizeAdjuster() {
+    if (this.myWaifu.height > 170 && this.myWaifu.bust > 90) {
+      this.myWaifu.weight += 4;
+    }
+
+    if (this.myWaifu.weight > 75 && this.myWaifu.height < 170) {
+      this.myWaifu.extras.unshift('Chubby, but doesn`t mind much');
+    }
+
     if (this.myWaifu.extras.includes('Futanari')) {
       const size = Math.floor(Math.random() * (35 - 10) + 10);
       this.myWaifu.extras[this.myWaifu.extras.indexOf('Futanari')] += ' ' + '(' + size + ' cm' + ')';
