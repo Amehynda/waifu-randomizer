@@ -85,12 +85,12 @@ export class RandomService {
     // Determine min and max ranges for certain measurements based on realism value
     // All values are metric-based
     const bustMin = 75;
-    const bustMax = 90 + (this.realismType * 6);
+    const bustMax = 95 + (this.realismType * 6);
 
-    const heightMin = 150;
+    const heightMin = 155;
     const heightMax = 180 + (this.realismType * 3);
 
-    const weightMin = 50;
+    const weightMin = 63;
     const weightMax = 75 - (this.realismType * 2);
 
 
