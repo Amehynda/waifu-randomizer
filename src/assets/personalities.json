@@ -9,7 +9,7 @@
 			"personality": "Chipper"
 		},
 		{
-			"personality": "Grumpy"
+			"personality": "Lazy"
 		},
 		{
 			"personality": "Optimist"
@@ -31,6 +31,9 @@
 		},
 		{
 			"personality": "Humble"
+		},
+		{
+			"personality": "Introverted"
 		}
 	]
 }

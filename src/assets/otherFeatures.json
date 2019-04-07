@@ -12,7 +12,7 @@
 			"feature": "Dyes her hair"
 		},
 		{
-			"feature": "Hopeless sugar addict"
+			"feature": "Addicted to sugary sweets"
 		},
 		{
 			"feature": "Enjoys baking in her spare time"
@@ -22,6 +22,9 @@
 		},
 		{
 			"feature": "Goes to a lot of parties"
+		},
+		{
+			"feature": "Always shopping for clothes"
 		},
 		{
 			"feature": "Horrible at dating"
@@ -46,6 +49,9 @@
 		},
 		{
 			"feature": "Plays a lot of Magic: The Gathering"
+		},
+		{
+			"feature": "Happily married"
 		}
 	],
 		"semiRealFeatures": [
@@ -88,10 +94,10 @@
 	],
 	"animeFeatures": [
 		{
-			"feature": "Part of a secret group that uses magic to stop evildoers"
+			"feature": "Part of a secret society that uses magic"
 		},
 		{
-			"feature": "Father has Yakuza connections"
+			"feature": "Father has mafia connections"
 		},
 		{
 			"feature": "Really into gyaru fashion"
@@ -106,7 +112,7 @@
 			"feature": "Is being followed by a mysterious spirit"
 		},
 		{
-			"feature": "Has traveled from the future to obtain an obscure anime DVD"
+			"feature": "Has time traveled from the future to obtain an obscure anime DVD"
 		}
 	],
 	"normalAdultFeatures": [
@@ -123,7 +129,7 @@
 			"feature": "Wishes her breasts were bigger"
 		},
 		{
-			"feature": "Has an intense oral fixation"
+			"feature": "Likes performing oral sex on her partner"
 		},
 		{
 			"feature": "Buys porn magazines" 

@@ -48,12 +48,20 @@ export class WaifuOutputComponent implements OnInit {
 
   }
 
+  playWow() {
+    const wow = new Audio();
+    wow.src = 'assets/wow.mp3';
+    wow.load();
+    wow.play();
+  }
+
   newWaifu() {
     this.router.navigateByUrl('');
   }
 
   ngOnInit() {
     this.getWaifu();
+    this.playWow();
   }
 
 }
