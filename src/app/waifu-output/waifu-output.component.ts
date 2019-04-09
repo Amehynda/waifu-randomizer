@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RandomService } from '../random-service.service';
+import { ExportService } from '../export.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class WaifuOutputComponent implements OnInit {
 
-  constructor(private randomService: RandomService, private router: Router) { }
+  constructor(private randomService: RandomService, private router: Router, private exportService: ExportService) { }
 
   display = false;
 
@@ -18,13 +19,13 @@ export class WaifuOutputComponent implements OnInit {
   age = 18;
   occupation = null;
   height = 100;
-  bust = 80;
+  bust = 'C';
   weight = 65;
   details = [];
   personality = null;
   hairColor = null;
   hairStyle = null;
-  eyeColor = null;
+  eyeColor = 'Brown';
   skintone = null;
   species = 'Human';
 
@@ -48,20 +49,24 @@ export class WaifuOutputComponent implements OnInit {
 
   }
 
-  playWow() {
-    const wow = new Audio();
-    wow.src = 'assets/wow.mp3';
-    wow.load();
-    wow.play();
+  // Reroll a new waifu with the same parameters in the form field.
+  rerollWaifu() {
+    this.display = false;
+    console.log('Rerolling!');
+    this.randomService.makeWaifu();
+    this.getWaifu();
   }
 
   newWaifu() {
     this.router.navigateByUrl('');
   }
 
+  saveWaifu() {
+    this.exportService.save();
+  }
+
   ngOnInit() {
     this.getWaifu();
-    this.playWow();
   }
 
 }

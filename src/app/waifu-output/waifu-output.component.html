@@ -8,8 +8,8 @@
         <p><b>Occupation:</b> {{ occupation }}</p>
         <p><b>Personality:</b> {{ personality }}</p>
         <p><b>Height:</b> {{ height }} cm</p>
-        <p><b>Bust:</b> {{ bust }} cm</p>
         <p><b>Weight:</b> {{ weight }} kg</p>
+        <p><b>Cup Size:</b> {{ bust }}</p>
         <p><b>Hair Color:</b> {{ hairColor }}</p>
         <p><b>Hair Style:</b> {{ hairStyle }}</p>
         <p><b>Eye Color:</b> {{ eyeColor }}</p>
@@ -24,13 +24,15 @@
         </div>
       </div>
       <div class="button-container result-child">
-          <button class="btn btn-primary" (click)="newWaifu();">Make A New Waifu</button>
+          <button class="btn btn-primary input-btn" (click)="newWaifu();">Make A New Waifu</button>
+          <button class="btn btn-primary input-btn" (click)="rerollWaifu();">Reroll</button>
+          <!-- <button class="btn btn-primary" (click)="saveWaifu();">Save to .txt</button> -->
       </div>
   </div>
   <div class="component-child no-waifu" *ngIf="!display">
     <p>There's nothing here! Make a new waifu by clicking on the button below.</p>
     <div class="button-container">
-        <button class="btn btn-primary" (click)="newWaifu();">New Waifu</button>
+        <button class="btn btn-primary input-btn" (click)="newWaifu();">New Waifu</button>
     </div>
   </div> 
 </div>

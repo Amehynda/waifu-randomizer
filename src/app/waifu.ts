@@ -6,7 +6,7 @@ export class Waifu {
     species?: string;
     occupation: string;
     personality: string;
-    bust: number;
+    bust: string;
     height: number;
     weight: number;
     skintone: string;

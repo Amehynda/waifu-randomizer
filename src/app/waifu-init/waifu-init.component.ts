@@ -49,7 +49,7 @@ export class WaifuInitComponent implements OnInit {
 
   // Submit the form values to the RandomService
   onSubmit(): void {
-    console.log(this.selectedNameRegion + ' ' + this.selectedRealismLevel + ' ' + this.adultEnabled);
+    // console.log(this.selectedNameRegion + ' ' + this.selectedRealismLevel + ' ' + this.adultEnabled);
     this.randomService.recieveParams(parseInt(this.selectedNameRegion, 10), parseInt(this.selectedRealismLevel, 10), this.adultEnabled);
   }
 

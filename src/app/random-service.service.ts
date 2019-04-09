@@ -29,6 +29,8 @@ export class RandomService {
   featuresJSON = bodyFeatures;
   otherFeaturesJSON = otherFeatures;
 
+  bustSizes = ['Flat', 'AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'G', 'H', 'I'];
+
   constructor(private router: Router) { }
 
   // Get the basic parameters from the waifu-init component
@@ -82,10 +84,9 @@ export class RandomService {
   // Appends basic measurements, eye, and hair color to the myWaifu object
   makeBody() {
 
-    // Determine min and max ranges for certain measurements based on realism value
+    // Determine min and max ranges for measurements based on realism value
     // All values are metric-based
-    const bustMin = 75;
-    const bustMax = 95 + (this.realismType * 6);
+    const bustMin = this.bustSizes.indexOf('Flat');
 
     const heightMin = 155;
     const heightMax = 180 + (this.realismType * 3);
@@ -93,8 +94,15 @@ export class RandomService {
     const weightMin = 63;
     const weightMax = 95;
 
+    // Take the realism type and determine the max range for bust sizes
+    if (this.realismType === 1) {
+      this.myWaifu.bust = this.bustSizes[Math.floor(Math.random() * ((this.bustSizes.indexOf('DD')) - bustMin) + bustMin)];
+    } else if (this.realismType === 2) {
+      this.myWaifu.bust = this.bustSizes[Math.floor(Math.random() * ((this.bustSizes.indexOf('F')) - bustMin) + bustMin)];
+    } else if (this.realismType === 3) {
+      this.myWaifu.bust = this.bustSizes[Math.floor(Math.random() * ((this.bustSizes.indexOf('I')) - bustMin) + bustMin)];
+    }
 
-    this.myWaifu.bust = Math.floor(Math.random() * (bustMax - bustMin + 1) + bustMin);
     this.myWaifu.height = Math.floor(Math.random() * (heightMax - heightMin + 1) + heightMin);
     this.myWaifu.weight = Math.floor(Math.random() * (weightMax - weightMin + 1) + weightMin);
     this.myWaifu.age = Math.floor(Math.random() * (34 - 20 + 1) + 20);
@@ -154,8 +162,9 @@ export class RandomService {
   // Add additional characteristic based on weight
   // Adjust weight based on height/bust size
   // If the waifu is a futanari, randomize how big they are
+  // If the waifu is lactating or pregnant, bump up their cup size
   sizeAdjuster() {
-    if (this.myWaifu.height > 170 && this.myWaifu.bust > 90) {
+    if (this.myWaifu.height > 170) {
       this.myWaifu.weight += 4;
     }
 
@@ -166,6 +175,10 @@ export class RandomService {
     if (this.myWaifu.extras.includes('Futanari')) {
       const size = Math.floor(Math.random() * (35 - 10) + 10);
       this.myWaifu.extras[this.myWaifu.extras.indexOf('Futanari')] += ' ' + '(' + size + ' cm' + ')';
+    }
+
+    if (this.myWaifu.extras.includes('Lactates') || this.myWaifu.extras.includes('Heavily Pregnant')) {
+      this.myWaifu.bust = this.bustSizes[this.bustSizes.indexOf(this.myWaifu.bust) + 2];
     }
     return;
   }
